@@ -24,6 +24,7 @@ body {
 			border: 0;
 			box-shadow: none;
 			text-transform: uppercase;
+			text-decoration: none;
 
 			.articleImg {
 				@include inline-block();
@@ -36,8 +37,11 @@ body {
 				}
 			}
 	
-			&:hover {
+			&:hover,&:visited,&:active {
 				text-decoration: none;
+			}
+
+			&:hover {
 				h3 {
 					color: $baseColor !important;
 				}
@@ -105,7 +109,7 @@ body {
 			&:hover {
 				color: scale-lightness($baseColor, -25%);
 				cursor: pointer;
-				border: 8px solid scale-lightness($baseColor, -10%);
+				border: 8px solid $baseColor;
 				top: 50%;
 			}
 			&.glyphicon-chevron-right {
@@ -130,7 +134,7 @@ body {
 					position: relative;
 					height: 540px;
 					width: 100%;
-					background-image: url('http://fr-minecraft.net/upload/wallpapers/images/fr-minecraft_wallpaper_BKQM.jpg');
+					background-image: url('https://media.mirrorsedge.com/content/www-mirrorsedge/en_US/news-articles/a-runners-destiny/_jcr_content/featuredImage/renditions/rendition1.img.jpg');
 					background-repeat: no-repeat;
 					@include background-size(cover);
 					h4 {
@@ -145,6 +149,38 @@ body {
 						padding: 10px 0;
 						font-size: 25px;
 					}
+				}
+			}
+		}
+	}
+	#staff {
+		.thumbnail {
+			.caption {
+				font-family: lato;
+				height: auto;
+				a {
+					margin-bottom: 8px;
+					@include inline-block();
+					padding-right: 5px;
+					img {
+						width: 30px;
+						height: 30px;
+					}
+				}
+				h3 {
+					margin-top: 0px;
+					margin-bottom: 0px;
+				}
+				h4 {
+					margin-top: 1px;
+					padding-left: 5px;
+					margin-bottom: 5px;
+					font-size: 16px;
+					font-style: italic;
+				}
+				span.desc {
+					display: block;
+					font-family: roboto;
 				}
 			}
 		}
