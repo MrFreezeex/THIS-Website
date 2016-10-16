@@ -19,18 +19,45 @@
 								$eot: "Lato-Regular.eot");
 body {
 	#news {
-		.thumbnail {
+		a.thumbnail {
 			font-family: lato;
 			border: 0;
 			box-shadow: none;
+			text-transform: uppercase;
+
+			.articleImg {
+				@include inline-block();
+				img {
+					margin-right: auto;
+					margin-left: auto;
+					display: block;
+					max-width: 100%;
+					height: auto;
+				}
+			}
+	
+			&:hover {
+				text-decoration: none;
+				h3 {
+					color: $baseColor !important;
+				}
+				.articleImg {
+					background-color: scale-lightness($baseColor, 5%);
+
+					img {
+						@include opacity(0.6);
+					}
+				}
+			}
+
 			h3 {
-				text-transform: uppercase;
 				margin: 4px 2px;
 				color: $titleColor;
 			}
 
 			.date {
 				color: $dateColor;
+				font-style: italic;
 			}
 		}
 	}
@@ -106,18 +133,17 @@ body {
 					background-image: url('http://fr-minecraft.net/upload/wallpapers/images/fr-minecraft_wallpaper_BKQM.jpg');
 					background-repeat: no-repeat;
 					@include background-size(cover);
-					.text {
-						text-align: left;
-						position: absolute;bottom: 0;left: 0;
-						background-color: rgba(0,0,0,0.5);
-						color:#fff;
-						max-width: 40%;
-						padding: 10px;
-						.title {
-							font-size: 25px;
-							display: block;
-							margin-bottom: 10px;
-						}
+					h4 {
+						font-family: lato;
+						text-transform: uppercase;
+						color: white;
+						width: 100%;
+						background-color: $blackColor;
+						margin-top: 0;
+						text-align: center;
+						@include opacity(0.85);
+						padding: 10px 0;
+						font-size: 25px;
 					}
 				}
 			}

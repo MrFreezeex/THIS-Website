@@ -1,5 +1,5 @@
 $baseColor	: #ce0808;
-
+$blackColor	: #212121;
 /* 
  * nav
  */
@@ -13,5 +13,5 @@ $colHighlight   : $baseColor;
  * news
  */
 
-$titleColor	: #000;
+$titleColor	: $blackColor;
 $dateColor	: scale-lightness($titleColor, 50%);
