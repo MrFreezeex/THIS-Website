@@ -19,6 +19,11 @@ $(document).ready(function() {
 	*	FUNCTIONS
 	*/
 
+	function updateFakeNav() {
+		$("#fakeNav").height($("nav").height());
+	}
+	updateFakeNav();
+
 	function slidePropManager() {
 		var heightSlide = widthSlide*(9/16);
 		$('.slide').css({'height': heightSlide});
@@ -131,6 +136,10 @@ $(document).ready(function() {
 		}
 	});
 
+	$("nav").on("click", ".navbar-toggle", function() {
+		updateFakeNav();
+	});
+
 	$('#slider').on('click', '.glyphicon', function (event) {
 		if (slideReady) {
 			if ($(this).hasClass('glyphicon-chevron-left')) {
@@ -148,6 +157,7 @@ $(document).ready(function() {
 		heightChevron = $('#slider .glyphicon-chevron-left').outerHeight();
 		indexWidth = $('#slider #slideIndex').width();
 		slidePropManager();
+		updateFakeNav();
 
 		totalSidebarHeight = 0;
 			$("#sidebarContainer > div").each(function(){
