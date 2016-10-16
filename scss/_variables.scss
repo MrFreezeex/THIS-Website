@@ -1,0 +1,17 @@
+$baseColor	: #ce0808;
+
+/* 
+ * nav
+ */
+
+$bgDefault      : scale-lightness(#fff, -3%);
+$bgHighlight    : bgDefault;
+$colDefault     : #000;
+$colHighlight   : $baseColor;
+
+/* 
+ * news
+ */
+
+$titleColor	: #000;
+$dateColor	: scale-lightness($titleColor, 50%);

@@ -1,0 +1,141 @@
+@import "compass";
+@import "variables";
+@import "navbar";
+
+@include font-face("roboto", 
+					font-files("Roboto-Regular-webfont.woff",
+								"Roboto-Regular-webfont.ttf",
+								"Roboto-Regular-webfont.svg"), 
+								$eot: "Roboto-Regular-webfont.eot");
+@include font-face("lato-thin", 
+					font-files("Lato-Thin.woff",
+								"Lato-Thin.woff2",
+								"Lato-Thin.ttf"), 
+								$eot: "Lato-Thin.eot");
+@include font-face("lato", 
+					font-files("Lato-Regular.woff",
+								"Lato-Regular.woff2",
+								"Lato-Regular.ttf"), 
+								$eot: "Lato-Regular.eot");
+body {
+	#news {
+		.thumbnail {
+			font-family: lato;
+			border: 0;
+			box-shadow: none;
+			h3 {
+				text-transform: uppercase;
+				margin: 4px 2px;
+				color: $titleColor;
+			}
+
+			.date {
+				color: $dateColor;
+			}
+		}
+	}
+	#slider {
+		width: 100%;
+		height: 650px;
+		position: relative;
+		#slideIndex {
+			height: 20px;
+			position: absolute;
+			bottom: 20px;
+			margin: 0 auto;
+			@include inline-block();
+			text-align: left;
+			.indexRound {
+				@include inline-block();
+				width: 18px;
+				height: 17px;
+				border: 2px solid $baseColor;
+				@include border-radius(20px);
+				margin-right: 5px;
+				&:last-child {
+					margin: 0;
+				}
+				&.active {
+					background-color: $baseColor;
+				}
+				&.inactive {
+					cursor: pointer;
+					&:hover {
+						background-color: scale-lightness($baseColor, -10%);
+					}
+				}
+			}
+		}
+		.glyphicon {
+			position: absolute;
+			color: #212121;
+			font-size: 55px;
+			top: 500px;
+			padding: 10px;
+			@include border-radius(55px);
+			border: 8px solid transparent;
+
+			&:hover {
+				color: scale-lightness($baseColor, -25%);
+				cursor: pointer;
+				border: 8px solid scale-lightness($baseColor, -10%);
+				top: 50%;
+			}
+			&.glyphicon-chevron-right {
+				right: 5%;
+			}
+			&.glyphicon-chevron-left {
+				left: 5%;
+			}
+		}
+		#slideContainer {
+			width: 66%;
+			margin: 0 auto;
+			position: relative;
+			overflow: hidden;
+			top: 45px;
+			#slideContain {
+				width: 100%;
+				position: relative;
+				height: 100%;
+				.slide {
+					@include inline-block();
+					position: relative;
+					height: 540px;
+					width: 100%;
+					background-image: url('http://fr-minecraft.net/upload/wallpapers/images/fr-minecraft_wallpaper_BKQM.jpg');
+					background-repeat: no-repeat;
+					@include background-size(cover);
+					.text {
+						text-align: left;
+						position: absolute;bottom: 0;left: 0;
+						background-color: rgba(0,0,0,0.5);
+						color:#fff;
+						max-width: 40%;
+						padding: 10px;
+						.title {
+							font-size: 25px;
+							display: block;
+							margin-bottom: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width : 992px) {
+	#slider {
+		#slideContainer {
+			width: 100% !important;
+		}
+
+		.glyphicon-chevron-right {
+			display: none;
+		}
+		.glyphicon-chevron-left {
+			display: none;
+		}
+	}
+}

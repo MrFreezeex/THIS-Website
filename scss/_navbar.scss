@@ -1,0 +1,61 @@
+.navbar-default .container-fluid {
+	font-family: lato-thin;
+	font-size: 18px;
+	font-weight: 400;
+	text-transform: uppercase;
+	@include opacity(0.7);
+	z-index: 200;
+	background-color: $bgDefault;
+	border-color: $bgHighlight;
+	@include border-radius(0);
+	.navbar-brand {
+		color: $colDefault;
+		padding: 25px 5px;
+
+		/* &:hover, &:focus { 
+			color: #fff; } */}
+	.navbar-text {
+		color: $colDefault; }
+	.navbar-nav {
+		> li {
+			> a {
+				padding: 25px 15px;
+				color: $colDefault;
+				&:hover {
+					background-color: $bgHighlight;
+					color: $colHighlight;
+					font-weight: 800;
+				}  &:focus {
+					color: $colHighlight; }}}
+		> .active {
+			> a, > a:hover, > a:focus {
+				color: $colHighlight;
+				background-color: $bgHighlight; }}
+		> .open {
+			> a, > a:hover, > a:focus {
+				color: $colHighlight;
+				background-color: $bgHighlight; }}}
+	.navbar-toggle {
+		border-color: $bgHighlight;
+		&:hover, &:focus {
+			background-color: $bgHighlight; }
+		.icon-bar {
+			background-color: $colDefault; }}
+	.navbar-collapse,
+	.navbar-form {
+		border-color: $colDefault; }
+	.navbar-link {
+		color: $colDefault;
+		&:hover {
+			color: $colHighlight; }}}
+@media (max-width: 767px) {
+	.navbar-default .navbar-nav .open .dropdown-menu {
+		> li > a {
+			color: $colDefault;
+			&:hover, &:focus {
+				color: $colHighlight; }}
+		> .active {
+			> a, > a:hover, > a:focus, {
+				color: $colHighlight;
+				background-color: $bgHighlight; }}}
+}
