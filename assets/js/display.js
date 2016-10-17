@@ -124,9 +124,34 @@ $(document).ready(function() {
 		activeSlide.removeClass('inactive').addClass('active')
 	}
 
+	function updateNav() {
+		var active = $("nav ul li:first-child");
+		$("nav ul li").each(function(index, el) {
+			if ($(window).scrollTop() >= $($(el).children("a").attr("href")).offset().top - $("#fakeNav").height() - 100)
+				active = el;
+		});
+
+		$("nav ul li").each(function(index, el) {
+			if (el == active)
+				$(el).addClass('active');
+			else
+				$(el).removeClass('active');
+		});
+	}
+	updateNav();
+
 	/*
 	*	LISTENERS
 	*/
+
+	$('.scrollTo').click( function(event) {
+		event.preventDefault();
+		window.location.hash = $(this).attr('href');
+		var page = $(this).attr('href');
+		var speed = 750;
+		$('html, body').animate( { scrollTop: $(page).offset().top - $(".fakeNav").height() }, speed );
+		return false;
+	});
 
 	$('#slideIndex').on('click', '.indexRound', function() {
 		var slide = $(this).index();
@@ -160,8 +185,12 @@ $(document).ready(function() {
 		updateFakeNav();
 
 		totalSidebarHeight = 0;
-			$("#sidebarContainer > div").each(function(){
+		$("#sidebarContainer > div").each(function(){
 			totalSidebarHeight += $(this).height() + 50 + 14;
 		});
+	});
+
+	$(window).scroll(function() {
+		updateNav();
 	});
 });

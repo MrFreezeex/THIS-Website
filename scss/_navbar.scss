@@ -11,9 +11,7 @@
 	.navbar-brand {
 		color: $colDefault;
 		padding: 25px 5px;
-
-		/* &:hover, &:focus { 
-			color: #fff; } */}
+	}
 	.navbar-text {
 		color: $colDefault; }
 	.navbar-nav {
@@ -26,9 +24,11 @@
 					color: $colHighlight;
 					font-weight: 800;
 				}  &:focus {
-					color: $colHighlight; }}}
+					color: $colDefault; }}}
 		> .active {
 			> a, > a:hover, > a:focus {
+				background-image: none;
+				box-shadow: none;
 				color: $colHighlight;
 				background-color: $bgHighlight; }}
 		> .open {

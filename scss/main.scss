@@ -18,6 +18,67 @@
 								"Lato-Regular.ttf"), 
 								$eot: "Lato-Regular.eot");
 body {
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	h2 {
+		font-family: lato-thin;
+		text-transform: uppercase;
+		background-color: $baseColor;
+		color: #fff;
+		@include border-radius(25px 0px);
+		padding: 10px 42px;
+		@include inline-block();
+		margin-bottom: 42px;
+	}
+	#discover {
+		@include background-size(contain);
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 60vw;
+		text-align: center;
+		#discoverTxt {
+			@include inline-block();
+			text-align: left;
+			font-family: lato;
+			color: #46505a;
+			margin-top: calc(30% - 244px);
+			text-transform: uppercase;
+
+			p {
+				margin-bottom: 30px;
+			}
+
+			a {
+				font-family: lato-thin;
+				color: #fff;
+				font-size: 17px;
+				border: 1px solid transparent;
+				@include border-radius(12px 0px);
+				padding: 10px 20px;
+
+
+				&.buttonDownload {
+					background-color: $baseColor;
+					border-color: $baseColor;
+					margin-right: 32px;
+					&:hover {
+						border-color: scale-lightness($baseColor, 8%);
+						background-color: scale-lightness($baseColor, 8%);
+					}
+				}
+
+				&.buttonMedia {
+					border-color: scale-lightness($blackColor, 2%);
+					color: #000;
+					&:hover {
+						color: #fff;
+						background-color: scale-lightness($blackColor, 2%);;
+					}
+				}
+			}
+		}
+	}
 	#news {
 		a.thumbnail {
 			font-family: lato;
@@ -63,6 +124,26 @@ body {
 				color: $dateColor;
 				font-style: italic;
 			}
+		}
+	}
+	#downloadRow {
+		.thumbnail {
+			font-family: roboto;
+			background-color: $baseColor;
+			padding: 0;
+		}
+		.caption {
+			background-color: scale-lightness($baseColor, 10%);
+			margin-bottom: 0;
+			color: #fff;
+			ul {
+				list-style-type: none;
+			}
+		}
+		img {
+			width: 200px;
+			height: 200px;
+			padding: 0 25px;
 		}
 	}
 	#slider {
@@ -153,7 +234,7 @@ body {
 			}
 		}
 	}
-	#staff {
+	#staffRow {
 		.thumbnail {
 			.caption {
 				font-family: lato;
@@ -173,7 +254,6 @@ body {
 				}
 				h4 {
 					margin-top: 1px;
-					padding-left: 5px;
 					margin-bottom: 5px;
 					font-size: 16px;
 					font-style: italic;
@@ -185,8 +265,59 @@ body {
 			}
 		}
 	}
+
+	footer {
+		padding: 50px 0;
+		margin-top: 100px;
+		background-color: $baseColor;
+		text-align: center;
+		color: #fff;
+		div {
+			text-align: left;
+			@include inline-block();
+			p {
+				margin-bottom: 2px;
+			}
+		}
+	}
+	a {
+		color: #fff;
+		font-weight: bold;
+		&:link, &:hover, &:visited, &:active {
+			text-decoration: none;
+		}
+		&:hover {
+			
+			color: scale-lightness($baseColor, -30%);
+		}
+	}
+}
+@media (min-width: 0px) and (max-width: 767px) {
+	#discover {
+		background-image: url(https://media.mirrorsedge.com/content/www-mirrorsedge/en_US/_jcr_content/components/hero_570bee91500d1/backgroundImageSet/small.img.jpg);
+		height: 200vw !important;
+	}
 }
 
+@media (min-width: 768px) {
+	#discover {
+		background-image: url(https://media.mirrorsedge.com/content/www-mirrorsedge/en_US/_jcr_content/components/hero_570bee91500d1/backgroundImageSet/medium.img.jpg);
+	}
+}
+
+@media (min-width: 1024px) {
+	#discover {
+		background-image: url(https://media.mirrorsedge.com/content/www-mirrorsedge/en_US/_jcr_content/components/hero_570bee91500d1/backgroundImageSet/large.img.jpg);
+	}
+}
+
+@media (min-width: 1362px) {
+	#discover {
+		background-image: url(https://media.mirrorsedge.com/content/www-mirrorsedge/en_US/_jcr_content/components/hero_570bee91500d1/backgroundImageSet/wide.img.jpg);
+	}
+}
+
+		
 @media only screen and (max-width : 992px) {
 	#slider {
 		#slideContainer {

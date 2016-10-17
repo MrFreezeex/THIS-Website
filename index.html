@@ -9,7 +9,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 		<link href="/assets/style/main.css" rel="stylesheet">
-		<script src="/assets/js/slider.js"></script>
+		<script src="/assets/js/display.js"></script>
 	</head>
 	<body>
 		<nav class="navbar navbar-default navbar-fixed-top">
@@ -29,30 +29,39 @@
 				<div class="collapse navbar-collapse navbar-left" id="bs-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li>
-							<a href="#discover">Découvrir</a>
+							<a class="scrollTo" href="#discover">Découvrir</a>
 						</li>
 
 						<li>
-							<a href="#news">News</a>
+							<a class="scrollTo" href="#news">News</a>
 						</li>
 
 						<li>
-							<a href="#media">Media</a>
+							<a class="scrollTo" href="#media">Media</a>
 						</li>
 
 						<li>
-							<a href="#download">Telechargements</a>
+							<a class="scrollTo" href="#download">Telechargements</a>
 						</li>
 
 						<li>
-							<a href="#staff">équipe</a>
+							<a class="scrollTo" href="#staff">équipe</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 		<div id="fakeNav"></div>
+		<div id="discover">
+			<div id="discoverTxt">
+				<h1>Nom du jv</h1>
+				<p>Slogan<p>
+				<a class="scrollTo buttonDownload" href="#download">Télecharger le jeux</a>
+				<a class="scrollTo buttonMedia" href="#media">Visionner nos media</a>
+			</div>
+		</div>
 		<div class="container">
+			<h2 id="news">Les news</h2>
 			<div class="row" id="news">
 				<div class ="col-md-4">
 					<a href="#" class="thumbnail">
@@ -89,6 +98,7 @@
 					</a>
 				</div>
 			</div>
+			<h2 id="media">Les médias</h2>
 			<div id='slider'>
 				<span class='glyphicon glyphicon-chevron-left'></span>
 				<div id='slideContainer'><div id='slideContain'>
@@ -103,7 +113,37 @@
 				<span class='glyphicon glyphicon-chevron-right'></span>
 				<div id='slideIndex'><div class='indexRound active'></div></div>
 			</div>
-			<div class="row" id="staff">
+			
+			<h2 id="download">Les téléchargement</h2>
+			<div id="downloadRow" class="row">
+				<div class="col-md-6">
+					<div class="thumbnail">
+						<img src="/assets/img/doc.svg" alt="report">
+						<div class="caption">
+							<ul>
+								<li><a href="#">Télecharger le jeux </a> (SOON)</li>
+								<li><a href="#">Manuel d'utilisation</a> (SOON)</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="thumbnail">
+						<img src="/assets/img/report.svg" alt="doc">
+						<div class="caption">
+							<ul>
+								<li><a href="#">Cahier des charges</a> (SOON)</li>
+								<li><a href="#">Rapport de soutenance 1</a> (SOON)</li>
+								<li><a href="#">Rapport de soutenance 2</a> (SOON)</li>
+								<li><a href="#">Rapport de soutenance 3</a> (SOON)</li>
+								<li><a href="#">Rapport de soutenance 4</a> (SOON)</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2 id="staff">L'equipe</h2>
+			<div class="row" id="staffRow">
 				<div class="col-md-3 col-sm-6">
 					<div class="thumbnail">
 						<img src="http://www.michelespiga.com/wp-content/uploads/2016/02/img_generic_person.jpg" alt="person">
@@ -150,5 +190,11 @@
 				</div>
 			</div>
 		</div>
+		<footer>
+			<div>
+				<p>Designed by <a href="https://twitter.com/Mr_Freezeex">Mr_Freezeex</a></p>
+				<p>&copy; Nom du jv - 2016</p>
+			</div>
+		</footer>
 	</body>
 </html>

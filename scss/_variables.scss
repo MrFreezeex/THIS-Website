@@ -5,7 +5,7 @@ $blackColor	: #212121;
  */
 
 $bgDefault      : scale-lightness(#fff, -3%);
-$bgHighlight    : bgDefault;
+$bgHighlight    : $bgDefault;
 $colDefault     : #000;
 $colHighlight   : $baseColor;
 
