@@ -8,6 +8,7 @@ $(document).ready(function() {
 	widthSlider = $('#slider').width(),
 	indexWidth,
 	slideReady = true,
+	speed = 750,
 	slidePos = 0,
 	slideTrans = 5000,
 	slideNbr = $('#slider #slideContainer .slide').length,
@@ -144,12 +145,8 @@ $(document).ready(function() {
 	*	LISTENERS
 	*/
 
-	$('.scrollTo').click( function(event) {
-		event.preventDefault();
-		window.location.hash = $(this).attr('href');
-		var page = $(this).attr('href');
-		var speed = 750;
-		$('html, body').animate( { scrollTop: $(page).offset().top - $(".fakeNav").height() }, speed );
+	$('.scrollTo').click(function(event) {
+		$('html, body').animate( { scrollTop: $($(this).attr('href')).offset().top - $("#fakeNav").height() -30 }, speed );
 		return false;
 	});
 
