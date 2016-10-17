@@ -455,47 +455,48 @@ body a {
 /* line 286, ../../scss/main.scss */
 body a:link, body a:hover, body a:visited, body a:active {
   text-decoration: none;
+  color: #fff;
 }
-/* line 289, ../../scss/main.scss */
+/* line 290, ../../scss/main.scss */
 body a:hover {
   color: #900606;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
-  /* line 296, ../../scss/main.scss */
+  /* line 297, ../../scss/main.scss */
   #discover {
     background-image: url(https://media.mirrorsedge.com/content/www-mirrorsedge/en_US/_jcr_content/components/hero_570bee91500d1/backgroundImageSet/small.img.jpg);
     height: 200vw !important;
   }
 }
 @media (min-width: 768px) {
-  /* line 303, ../../scss/main.scss */
+  /* line 304, ../../scss/main.scss */
   #discover {
     background-image: url(https://media.mirrorsedge.com/content/www-mirrorsedge/en_US/_jcr_content/components/hero_570bee91500d1/backgroundImageSet/medium.img.jpg);
   }
 }
 @media (min-width: 1024px) {
-  /* line 309, ../../scss/main.scss */
+  /* line 310, ../../scss/main.scss */
   #discover {
     background-image: url(https://media.mirrorsedge.com/content/www-mirrorsedge/en_US/_jcr_content/components/hero_570bee91500d1/backgroundImageSet/large.img.jpg);
   }
 }
 @media (min-width: 1362px) {
-  /* line 315, ../../scss/main.scss */
+  /* line 316, ../../scss/main.scss */
   #discover {
     background-image: url(https://media.mirrorsedge.com/content/www-mirrorsedge/en_US/_jcr_content/components/hero_570bee91500d1/backgroundImageSet/wide.img.jpg);
   }
 }
 @media only screen and (max-width: 992px) {
-  /* line 323, ../../scss/main.scss */
+  /* line 324, ../../scss/main.scss */
   #slider #slideContainer {
     width: 100% !important;
   }
-  /* line 327, ../../scss/main.scss */
+  /* line 328, ../../scss/main.scss */
   #slider .glyphicon-chevron-right {
     display: none;
   }
-  /* line 330, ../../scss/main.scss */
+  /* line 331, ../../scss/main.scss */
   #slider .glyphicon-chevron-left {
     display: none;
   }

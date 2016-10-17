@@ -145,9 +145,17 @@ $(document).ready(function() {
 	*	LISTENERS
 	*/
 
+
 	$('.scrollTo').click(function(event) {
+		event.preventDefault();
+		var page = $(this).attr('href');
 		$('html, body').animate( { scrollTop: $($(this).attr('href')).offset().top - $("#fakeNav").height() -30 }, speed );
-		return false;
+		window.location.hash = $(this).attr('href');
+	});
+
+	$('a').click(function(event) {
+		if ($(this).attr('href') === "#")
+			event.preventDefault();
 	});
 
 	$('#slideIndex').on('click', '.indexRound', function() {
