@@ -1,26 +1,37 @@
 @import "compass";
+@import "compass/configuration";
 @import "variables";
 @import "navbar";
 
-@include font-face("roboto", 
-					font-files("Roboto-Regular-webfont.woff",
-								"Roboto-Regular-webfont.ttf",
-								"Roboto-Regular-webfont.svg"), 
-								$eot: "Roboto-Regular-webfont.eot");
-@include font-face("lato-thin", 
-					font-files("Lato-Thin.woff",
-								"Lato-Thin.woff2",
-								"Lato-Thin.ttf"), 
-								$eot: "Lato-Thin.eot");
-@include font-face("lato", 
-					font-files("Lato-Regular.woff",
-								"Lato-Regular.woff2",
-								"Lato-Regular.ttf"), 
-								$eot: "Lato-Regular.eot");
+$compass-options: (fonts-path: absolute-path(join-file-segments("assets", "fonts")));
+@include compass-configuration($compass-options);
+
+@font-face {
+  font-family: "roboto";
+  src: url('/assets/fonts/Roboto-Regular-webfont.eot');
+  src: url('/assets/fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+   url('/assets/fonts/Roboto-Regular-webfont.woff') format('woff'), 
+   url('/assets/fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+   url('/assets/fonts/Roboto-Regular-webfont.svg') format('svg'); }
+@font-face {
+  font-family: "lato-thin";
+  src: url('/assets/fonts/Lato-Thin.eot');
+  src: url('/assets/fonts/Lato-Thin.eot?#iefix') format('embedded-opentype'), 
+  url('/assets/fonts/Lato-Thin.woff') format('woff'), 
+  url('/assets/fonts/Lato-Thin.woff2') format('woff2'), 
+  url('/assets/fonts/Lato-Thin.ttf') format('truetype'); }
+@font-face {
+  font-family: "lato";
+  src: url('/assets/fonts/Lato-Regular.eot');
+  src: url('/assets/fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'), 
+  url('/assets/fonts/Lato-Regular.woff') format('woff'), 
+  url('/assets/fonts/Lato-Regular.woff2') format('woff2'), 
+  url('/assets/fonts/Lato-Regular.ttf') format('truetype'); }
 body {
 	font-smoothing: antialiased;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+
 	h2 {
 		font-family: lato-thin;
 		text-transform: uppercase;
@@ -31,12 +42,14 @@ body {
 		@include inline-block();
 		margin-bottom: 42px;
 	}
+
 	#discover {
 		@include background-size(contain);
 		background-repeat: no-repeat;
 		width: 100%;
 		height: 60vw;
 		text-align: center;
+
 		#discoverTxt {
 			@include inline-block();
 			text-align: left;
@@ -57,7 +70,6 @@ body {
 				@include border-radius(12px 0px);
 				padding: 10px 20px;
 
-
 				&.buttonDownload {
 					background-color: $baseColor;
 					border-color: $baseColor;
@@ -71,6 +83,7 @@ body {
 				&.buttonMedia {
 					border-color: scale-lightness($blackColor, 2%);
 					color: #000;
+
 					&:hover {
 						color: #fff;
 						background-color: scale-lightness($blackColor, 2%);;
@@ -126,12 +139,14 @@ body {
 			}
 		}
 	}
+
 	#downloadRow {
 		.thumbnail {
 			font-family: roboto;
 			background-color: $baseColor;
 			padding: 0;
 		}
+
 		.caption {
 			background-color: scale-lightness($baseColor, 10%);
 			margin-bottom: 0;
@@ -140,6 +155,7 @@ body {
 				list-style-type: none;
 			}
 		}
+
 		img {
 			width: 200px;
 			height: 200px;
@@ -150,6 +166,7 @@ body {
 		width: 100%;
 		height: 650px;
 		position: relative;
+
 		#slideIndex {
 			height: 20px;
 			position: absolute;
@@ -157,6 +174,7 @@ body {
 			margin: 0 auto;
 			@include inline-block();
 			text-align: left;
+		
 			.indexRound {
 				@include inline-block();
 				width: 18px;
@@ -164,6 +182,7 @@ body {
 				border: 2px solid $baseColor;
 				@include border-radius(20px);
 				margin-right: 5px;
+		
 				&:last-child {
 					margin: 0;
 				}
@@ -178,6 +197,7 @@ body {
 				}
 			}
 		}
+		
 		.glyphicon {
 			position: absolute;
 			color: #212121;
@@ -200,16 +220,19 @@ body {
 				left: 5%;
 			}
 		}
+		
 		#slideContainer {
 			width: 66%;
 			margin: 0 auto;
 			position: relative;
 			overflow: hidden;
 			top: 45px;
+		
 			#slideContain {
 				width: 100%;
 				position: relative;
 				height: 100%;
+		
 				.slide {
 					@include inline-block();
 					position: relative;
@@ -218,6 +241,7 @@ body {
 					background-image: url('https://media.mirrorsedge.com/content/www-mirrorsedge/en_US/news-articles/a-runners-destiny/_jcr_content/featuredImage/renditions/rendition1.img.jpg');
 					background-repeat: no-repeat;
 					@include background-size(cover);
+		
 					h4 {
 						font-family: lato;
 						text-transform: uppercase;
@@ -239,25 +263,30 @@ body {
 			.caption {
 				font-family: lato;
 				height: auto;
+		
 				a {
 					margin-bottom: 8px;
 					@include inline-block();
 					padding-right: 5px;
+		
 					img {
 						width: 30px;
 						height: 30px;
 					}
 				}
+		
 				h3 {
 					margin-top: 0px;
 					margin-bottom: 0px;
 				}
+		
 				h4 {
 					margin-top: 1px;
 					margin-bottom: 5px;
 					font-size: 16px;
 					font-style: italic;
 				}
+		
 				span.desc {
 					display: block;
 					font-family: roboto;
@@ -272,24 +301,47 @@ body {
 		background-color: $baseColor;
 		text-align: center;
 		color: #fff;
+		
 		div {
 			text-align: left;
 			@include inline-block();
+		
 			p {
 				margin-bottom: 2px;
 			}
 		}
 	}
+	
 	a {
 		color: #fff;
 		font-weight: bold;
+		
 		&:link, &:hover, &:visited, &:active {
 			text-decoration: none;
 			color: #fff;
 		}
+
 		&:hover {
-			
 			color: scale-lightness($baseColor, -30%);
+		}
+	}
+
+	.newsContainer {
+		img {
+			width: 100%;
+			margin-top: 30px;
+		}
+
+		h3 {
+			margin-top: 5px;
+			margin-bottom: 15px;
+			text-transform: uppercase;
+		}
+
+		.authorContainer {
+			.author {
+				font-weight: bold;
+			}
 		}
 	}
 }
@@ -315,9 +367,33 @@ body {
 @media (min-width: 1362px) {
 	#discover {
 		background-image: url(https://media.mirrorsedge.com/content/www-mirrorsedge/en_US/_jcr_content/components/hero_570bee91500d1/backgroundImageSet/wide.img.jpg);
+		
 	}
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+	#discoverTxt {
+		margin-top: calc(50% - 266px) !important;
+	}
+}
+
+@media (max-width: 767px) {
+	#discoverTxt {
+		margin-top: 20px !important;
+		margin-left: 30px;
+
+		a {
+			@include inline-block();
+			margin-top: 10px;
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	#discoverTxt a {
+		display: none;
+	}
+}
 		
 @media only screen and (max-width : 992px) {
 	#slider {

@@ -10,7 +10,7 @@
 	@include border-radius(0);
 	.navbar-brand {
 		color: $colDefault;
-		padding: 25px 5px;
+		padding: 10px 25px;
 	}
 	.navbar-text {
 		color: $colDefault; }
@@ -58,4 +58,15 @@
 			> a, > a:hover, > a:focus, {
 				color: $colHighlight;
 				background-color: $bgHighlight; }}}
+		.navbar-brand {
+			padding: 5px 10px !important;
+
+			img {
+				width: 40px;
+				height: 40px;
+			}
+		}
+	ul.nav li a {
+		padding: 10px 25px !important;
+	}
 }
