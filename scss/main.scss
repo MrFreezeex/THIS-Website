@@ -238,7 +238,7 @@ body {
 					position: relative;
 					height: 540px;
 					width: 100%;
-					background-image: url('https://media.mirrorsedge.com/content/www-mirrorsedge/en_US/news-articles/a-runners-destiny/_jcr_content/featuredImage/renditions/rendition1.img.jpg');
+					background-image: url('../img/news.jpg');
 					background-repeat: no-repeat;
 					@include background-size(cover);
 		
@@ -260,6 +260,7 @@ body {
 	}
 	#staffRow {
 		.thumbnail {
+			min-height: 570px;
 			.caption {
 				font-family: lato;
 				height: auto;
@@ -347,26 +348,26 @@ body {
 }
 @media (min-width: 0px) and (max-width: 767px) {
 	#discover {
-		background-image: url(https://media.mirrorsedge.com/content/www-mirrorsedge/en_US/_jcr_content/components/hero_570bee91500d1/backgroundImageSet/small.img.jpg);
+		background-image: url('../img/smallBackground.jpg');
 		height: 200vw !important;
 	}
 }
 
 @media (min-width: 768px) {
 	#discover {
-		background-image: url(https://media.mirrorsedge.com/content/www-mirrorsedge/en_US/_jcr_content/components/hero_570bee91500d1/backgroundImageSet/medium.img.jpg);
+		background-image: url('../img/mediumBackground.jpg');
 	}
 }
 
 @media (min-width: 1024px) {
 	#discover {
-		background-image: url(https://media.mirrorsedge.com/content/www-mirrorsedge/en_US/_jcr_content/components/hero_570bee91500d1/backgroundImageSet/large.img.jpg);
+		background-image: url('../img/largeBackground.jpg');
 	}
 }
 
 @media (min-width: 1362px) {
 	#discover {
-		background-image: url(https://media.mirrorsedge.com/content/www-mirrorsedge/en_US/_jcr_content/components/hero_570bee91500d1/backgroundImageSet/wide.img.jpg);
+		background-image: url('../img/wideBackground.jpg');
 		
 	}
 }
