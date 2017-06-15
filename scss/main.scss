@@ -131,6 +131,7 @@ body {
 			h3 {
 				margin: 4px 2px;
 				color: $titleColor;
+				font-size: 18px;
 			}
 
 			.date {
@@ -260,7 +261,7 @@ body {
 	}
 	#staffRow {
 		.thumbnail {
-			min-height: 570px;
+			min-height: 575px;
 			.caption {
 				font-family: lato;
 				height: auto;
@@ -328,9 +329,9 @@ body {
 	}
 
 	.newsContainer {
+		margin-top: 50px;
 		img {
 			width: 100%;
-			margin-top: 30px;
 		}
 
 		h3 {
